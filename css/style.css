@@ -29,3 +29,19 @@ background-color: #d3d3d3 !important;
 .redtext {
         color: white;
 }
+
+.prof-box {
+	width: 400px;
+	height: 400px;
+	background: rgba(0,0,0,0.4);
+	padding: 40px;
+	color: black;
+	margin: 0 auto;
+	margin-top: 140px;
+	
+}
+.prof-pic{
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
