@@ -11,3 +11,21 @@ body,
     -o-background-size: cover;
     background-size: cover;
 }
+
+.containerNew {
+   background-color: 	#808080;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+ 
+}
+
+.well{
+background-color: #d3d3d3 !important;
+}
+
+
+.redtext {
+        color: white;
+}
