@@ -14,20 +14,30 @@ body,
 
 .containerNew {
    background-color: 	#808080;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 50px;
-  padding-right: 50px;
- 
+  margin-right: 100px;
+  margin-left: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+	padding-bottom:  50px;
+	border-radius: 20px;
+	
 }
 
 .well{
 background-color: #d3d3d3 !important;
 }
 
+.g-item{
+    width: 500px;
+    height: 500px;
+}
 
 .redtext {
         color: white;
+}
+
+.neonGreenText {
+        color: #39ff14;
 }
 
 .prof-box {
