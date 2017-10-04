@@ -1,0 +1,103 @@
+body {
+	background-color: #232323;
+	margin: 0;
+	/*font type*/
+	font-family: "Montserrat", "Avenir";
+}
+
+.square {
+	width: 30%;
+	background: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	/*add a border radius*/
+	border-radius: 50%;
+	/*transition effect*/
+	transition: background 0.6s;
+	/*other*/
+	-webkit-transition: background 0.6s;
+	/*for browser support*/
+	-moz-transition: background 0.6s;
+}
+
+#container {
+	/*margin spacing, auto on left and right*/
+	margin: 20px auto;
+	max-width: 600px;
+}
+
+/*header 1*/
+h1 {
+	/*align text to center*/
+	text-align: center;
+	/*header size*/
+	line-height: 1.1;
+	/*font thickness*/
+	font-weight: normal;
+	color: white;
+	/*remove margin and change background*/
+	background: steelblue;
+	margin: 0;
+	/*to upper*/
+	text-transform: uppercase;
+	/*add padding*/
+	padding: 20px 0;
+}
+
+/*increase font*/
+#colorDisplay {
+	font-size: 200%;
+}
+
+#message {
+	/*span size*/
+	display: inline-block;
+	width: 20%;
+}
+
+#stripe {
+	background: white;
+	height: 30px;
+	text-align: center;
+	color: black;
+}
+
+/*selected buttons*/
+.selected {
+	color: white;
+	background: steelblue;
+}
+
+button {
+	/*remove borders*/
+	border: none;
+	/*clear buttons*/
+	background: none;
+	/*to upper*/
+	text-transform: uppercase;
+	/*center height*/
+	height: 100%;
+	/*thickness*/
+	font-weight: 700;
+	color: steelblue;
+	/*spacing between letters*/
+	letter-spacing: 1px;
+	/*inherited font size*/
+	font-size: inherit;
+
+	/*transitioning css*/
+	transition: all 0.3s;
+	/*other*/
+	-webkit-transition: all 0.3s;
+	/*mozilla*/
+	-moz-transition: all 0.3s;
+	/*remove outline*/
+	outline: none;
+}
+
+/*hovering effect*/
+button:hover {
+	color: white;
+	background: steelblue;
+}
