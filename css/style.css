@@ -36,7 +36,7 @@ background-color: #d3d3d3 !important;
         color: white;
 }
 .redtext2 {
-        color: #39FF14;
+        color: black;
 }
 
 .neonGreenText {
@@ -58,3 +58,8 @@ background-color: #d3d3d3 !important;
 	height: 200px;
 	width: 200px;
 }
+.img{
+	border:1px solid ;
+
+border-radius: 20px;
+} 
