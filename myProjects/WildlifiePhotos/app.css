@@ -1,0 +1,9 @@
+/*custom image width and div sizes*/
+img {
+	width: 100%;
+	
+}
+div {
+	border: 2px solid black;
+	height: 100px;
+}
