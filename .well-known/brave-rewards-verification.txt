@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: saavfoxdev.com
+Token: adb44d432fec8600c328cfe2fb3117c260be916b7029ed3b85f4cc31102444af
