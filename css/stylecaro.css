@@ -1,0 +1,36 @@
+.carousel-wrapper {
+  max-width: 900px;
+  margin: auto;
+  overflow: visible;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  overflow: visible;
+}
+
+.carousel-item {
+  flex: 0 0 70%;
+  margin: 0 15px;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  justify-content: center;
+  display: flex;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.carousel-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
