@@ -11,6 +11,11 @@
 <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 <style>
     body { background-color: #4d4c4e; }
 
@@ -165,150 +170,117 @@
 </section>
 <!--	-->
 <!--	-->
-<!--New Section-->
-<section>
-		<div class="row">
-        	<div class="col-md-12 text-center">
-            	<h2 class="redtext">Recent Work</h2>
-            	<p class="neonGreenText">Web development</p>
-            </div>
+<section id="projects">
+  <div class="text-center">
+    <h2 class="redtext">Recent Work</h2>
+    <p class="neonGreenText">Support, Blockchain, and Web Projects</p>
+  </div>
+
+  <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h3 class="redtext">Email Subscription Web App</h3>
+            <h6 class="redtext">MySQL, NodeJS, Express</h6>
+            <img src="images/MYsqlNodeJS.jpg" class="img-fluid img-rounded" alt="">
+            <figcaption class="figcap-proj">Store user emails in a MySQL database. Deployed on Heroku.</figcaption>
+            <br>
+            <a class="btn btn-default" href="https://email-sign-up-page.herokuapp.com" target="_blank">Demo</a>
+            <a class="btn btn-default" href="https://github.com/saavfoxdev/Registration-site" target="_blank">Code</a>
+          </div>
         </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h3 class="redtext">TRAVEL FOX: Web Design</h3>
+            <h6 class="redtext">HTML, CSS, Bootstrap 4</h6>
+            <img src="images/travelfox.png" class="img-fluid img-rounded" alt="">
+            <figcaption class="figcap-proj">A Bootstrap-based responsive delivery concept page.</figcaption>
+            <br>
+            <a class="btn btn-default" href="https://travelfox.netlify.com/?#" target="_blank">Demo</a>
+            <a class="btn btn-default" href="https://github.com/saavfoxdev/travelfox" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h3 class="redtext">Landing Page Design</h3>
+            <h6 class="redtext">HTML, CSS, JS</h6>
+            <img src="images/saavlanding.png" class="img-fluid img-rounded" alt="">
+            <figcaption class="figcap-proj">Landing page with animated CSS effects.</figcaption>
+            <br>
+            <a class="btn btn-default" href="https://saavfoxdev.com" target="_blank">Demo</a>
+            <a class="btn btn-default" href="https://github.com/saavfoxdev/SAAVFOXLANDING" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h3 class="redtext">Dog Adoption Page</h3>
+            <h6 class="redtext">HTML, CSS, JavaScript</h6>
+            <img src="images/dogBffPage.jpg" class="img-fluid img-rounded" alt="">
+            <figcaption class="figcap-proj">Image rotator using JS. Dog-friendly design.</figcaption>
+            <br>
+            <a class="btn btn-default" href="myProjects/dogBffPage/index.html" target="_blank">Demo</a>
+            <a class="btn btn-default" href="https://github.com/saavfoxdev/saavfoxdev.github.io/tree/master/myProjects/dogBffPage" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h3 class="redtext">RGB Guessing Game</h3>
+            <h6 class="redtext">HTML, CSS, JavaScript</h6>
+            <img src="myProjects/colorGame/rgbGuessingGame.PNG" class="img-fluid img-rounded" alt="">
+            <figcaption class="figcap-proj">Play a fun game to guess the RGB color.</figcaption>
+            <br>
+            <a class="btn btn-default" href="myProjects/colorGame/colorGame.html" target="_blank">Demo</a>
+            <a class="btn btn-default" href="https://github.com/saavfoxdev/Web-Development/tree/master/12.color%20game%20project" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <h3 class="redtext">Stitch Keyshot Model</h3>
+            <h6 class="redtext">Maya, Z-Brush, Keyshot</h6>
+            <img src="images/0_17.jpg" class="img-fluid img-rounded" alt="">
+            <figcaption class="figcap-proj">Modeled in Maya/Z-Brush, rendered in Keyshot.</figcaption>
+            <br>
+            <a class="btn btn-default" href="myProjects/Stitch model in keyshot/untitled_XR.3.html" target="_blank">Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
+  </div>
 </section>
-<!---->
-<!---->
-<!--New Section-->
-<section>
-<div class=" containerForProjects">
-<!--Row Begins-->
-<!--	-->
-	<section class="hrGlowSection"></section>
-<!--	-->
-        <div class="row">
-<!-- EMAIL SUBSCRIPTION APP-->
-<div class=" col-lg-6 col-xs-12 col-md-6 text-center " >
-    <h3 class="redtext">Email Subscription Web App</h3>
-    <h6 class="redtext">Made using MySQL, NodeJS, and Express </h6>
-<!--				-->
-	<figure>
-    <img src="images/MYsqlNodeJS.jpg" class="img-responsive  img-rounded" alt="">
-	<br />
-	<figcaption class="figcap-proj"> Store user emails in a MySQL Database, node.js App deployed via Heroku. </figcaption>
-	</figure>
-<!--       			-->
-    <div class="btn btn-default"> <a href="https://email-sign-up-page.herokuapp.com" target="_blank">Demo</a>  </div>
-	<div class="btn btn-default"> <a href="https://github.com/saavfoxdev/Registration-site" target="_blank">Code</a> </div>
-	<hr class="hrGlow">
-</div>
 
-<!-- Dog adoption APP-->
-<div class=" col-lg-6 col-xs-12 col-md-6 text-center ">
-    <h3 class="redtext">TRAVEL FOX: web design</h3>
-	<h6 class="redtext">Made using HTML, CSS , based heavily on BootStrap 4 </h6>
-	<figure>
-	<img src="images/travelfox.png" class="img-responsive  img-rounded" alt="">
-	<br />
-	<figaption class="redtext" >This page is an idea for a delivery service, design was made with bootstrap 4</figaption>
-	</figure>
-	<div class="btn btn-default"> <a href="https://travelfox.netlify.com/?#"target="_blank">Demo</a>  </div>
-	<div class="btn btn-default"> <a href="https://github.com/saavfoxdev/travelfox"  target="_blank">Code</a> </div>
-	<hr class="hrGlow">
-</div>
-		</div>
-</div>
-<!-- ROW END-->
-<!--	-->
-	<section class="hrGlowSection"></section>
-<!--	-->
-<!--Row Begin-->
-	 </section>
-
-
-
-	 <!--New Section-->
-	 <section>
-	 <div class=" containerForProjects">
-	 <!--Row Begins-->
-	 <!--	-->
-	 	<section class="hrGlowSection"></section>
-	 <!--	-->
-	         <div class="row">
-	 <!-- EMAIL SUBSCRIPTION APP-->
-	 <div class=" col-lg-6 col-xs-12 col-md-6 text-center " >
-	     <h3 class="redtext">Landing Page Design</h3>
-	     <h6 class="redtext">Made using CSS, HTML, and JS </h6>
-	 <!--				-->
-	 	<figure>
-	     <img src="images/saavlanding.png" class="img-responsive  img-rounded" alt="">
-	 	<br />
-	 	<figcaption class="figcap-proj">  Landing page with motion effects from CSS Animate library. </figcaption>
-	 	</figure>
-	 <!--       			-->
-	     <div class="btn btn-default"> <a href="https://saavfoxdev.com" target="_blank">Demo</a>  </div>
-	 	<div class="btn btn-default"> <a href="https://github.com/saavfoxdev/SAAVFOXLANDING" target="_blank">Code</a> </div>
-	 	<hr class="hrGlow">
-	 </div>
-
-	 <!-- Dog adoption APP-->
-	 <div class=" col-lg-6 col-xs-12 col-md-6 text-center ">
-	     <h3 class="redtext">Dog adoption page</h3>
-	 	<h6 class="redtext">Made using HTML, CSS, JavaScript </h6>
-	 	<figure>
-	 	<img src="images/dogBffPage.jpg" class="img-responsive  img-rounded" alt="">
-	 	<br />
-	 	<figaption class="redtext" >This page cycles through images using JavaScript</figaption>
-	 	</figure>
-	 	<div class="btn btn-default"> <a href="myProjects/dogBffPage/index.html" target="_blank">Demo</a>  </div>
-	 	<div class="btn btn-default"> <a href="https://github.com/saavfoxdev/saavfoxdev.github.io/tree/master/myProjects/dogBffPage" target="_blank">Code</a> </div>
-	 	<hr class="hrGlow">
-	 </div>
-	 		</div>
-	 </div>
-	 <!-- ROW END-->
-	 <!--	-->
-	 	<section class="hrGlowSection"></section>
-	 <!--	-->
-	 <!--Row Begin-->
-	 	 </section>
-
-
-
-
-
-	<section>
-		<div class=" containerForProjects"  >
-        <div class="row">
-<!--  RGB GUESSING GAME PREVIEW-->
-          	<div class=" col-lg-6 col-xs-12 col-md-6 text-center ">
-                <h3 class="redtext">RGB guessing game</h3>
-                <h6 class="redtext">Made using CSS, HTML, and JavaScript </h6>
-				<figure>
-            	<img src="myProjects/colorGame/rgbGuessingGame.PNG" class="img-responsive img-rounded"  alt="">
-                <br />
-				<figcaption class="redtext"> Guess the color, click the link to play now!</figcaption>
-				</figure>
-                <div class="btn btn-default"> <a href="myProjects/colorGame/colorGame.html" target="_blank">Demo</a> </div>
-				<div class="btn btn-default"> <a href="https://github.com/saavfoxdev/Web-Development/tree/master/12.color%20game%20project" target="_blank">Code</a> </div>
-				<hr class="hrGlow">
-            </div>
-			<!--  Stitch 3d-model PREVIEW-->
-				<div class=" col-lg-6 col-xs-12 col-md-6 text-center ">
-                <h3 class="redtext">Stitch Keyshot Model</h3>
-                <h6 class="redtext">Made using Maya, Z-Brush, and Keyshot </h6>
-				<figure>
-            	<img src="images/0_17.jpg" class="img-responsive img-rounded"  alt="">
-                <br />
-				<figcaption class="redtext"> Wrokflow: Maya to Z-Brush and use Keyshot to renderer</figcaption>
-				</figure>
-                <div class="btn btn-default"> <a href="myProjects/Stitch model in keyshot/untitled_XR.3.html" target="_blank">Demo</a> </div>
-				<hr class="hrGlow">
-				<div> </div>
-            </div>
-        </div>
-		</div>
-		<section class="hrGlowSection"></section>
-	</section>
-<!-- ROW END-->
-<!-- CONTAINERNEW END  -->
 
 
 
