@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nestor Saavedra: SFD</title>
-
-<!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nestor Saavedra: SFD</title>
+  
+    <!-- Bootstrap 4.5 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+    <!-- Optional: Your custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+  
+    <!-- Optional: W3CSS if you're using any W3 classes -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+    <!-- Bootstrap 4.5 JS and jQuery Slim -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  
 
 
 <style>
@@ -29,84 +34,96 @@
 
 
 
-    <!--Linked in script, in case of badge use -->
-    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<!-- LinkedIn script (unchanged) -->
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 
-<body >
+<body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myDefaultNavbar1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
-      <a class="navbar-brand" href="#"> NES  </a> </div>
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">NES</a>
 
+    <!-- Toggler/collapsible button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://linkedin.com/in/nessaavedra">Resume <span class="sr-only">(current)</span></a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/in/nessaavedra">
+            <img src="images/linkedin.jpg" alt="LinkedIn" height="15" width="15"> LinkedIn
+          </a>
+        </li>
 
-
-
-
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="myDefaultNavbar1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="https://linkedin.com/in/nessaavedra
-
-">Resume <span class="sr-only">(current)</span></a></li>
-
-		  <li>		<a href="https://linkedin.com/in/nessaavedra
-
-"> <img src="images/linkedin.jpg" alt="" height="15" width="15">	 LinkedIn</a></li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true"> <img	src= "images/mark-github-512.png" alt="" height="15" width="15"> gitHub <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="https://github.com/saavfoxdev/iOS-11-Apps">   <img	src= "images/apple.png" alt="" height="30" width="25"> iOS </a></li>
-            <li><a href="https://github.com/saavfoxdev/Kotlin">  <img src= "images/android-logo-icon-64976.png" alt="" height="30" width="30">Android   </a></li>
-            <li><a href="https://github.com/saavfoxdev/Node-JS">  <img	src= "images/html5_logo.png" alt="" height="30" width="25"> WebDev </a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="https://github.com/saavfoxdev/Kotlin">  <img	src= "images/kotlin.png" alt="" height="30" width="30"> Kotlin </a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="githubDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="images/mark-github-512.png" alt="" height="15" width="15"> GitHub
+          </a>
+          <div class="dropdown-menu" aria-labelledby="githubDropdown">
+            <a class="dropdown-item" href="https://github.com/saavfoxdev/iOS-11-Apps">
+              <img src="images/apple.png" alt="iOS" height="30" width="25"> iOS
+            </a>
+            <a class="dropdown-item" href="https://github.com/saavfoxdev/Kotlin">
+              <img src="images/android-logo-icon-64976.png" alt="Android" height="30" width="30"> Android
+            </a>
+            <a class="dropdown-item" href="https://github.com/saavfoxdev/Node-JS">
+              <img src="images/html5_logo.png" alt="WebDev" height="30" width="25"> WebDev
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/saavfoxdev/Kotlin">
+              <img src="images/kotlin.png" alt="Kotlin" height="30" width="30"> Kotlin
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">One more separated link</a>
+          </div>
         </li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
-<!--        add something here-->
+
+      <!-- Right-side content (optional) -->
+      <form class="form-inline my-2 my-lg-0">
+        <!-- Add search or buttons here if needed -->
       </form>
+    </div>
 
-
-</div>
-    <!-- /.navbar-collapse -->
   </div>
-
-
-
-
-  <!-- /.container-fluid -->
 </nav>
+
+
+
+
+<!-- /.container-fluid -->
+</nav>
+
 <section>
   <div class="jumbotron text-center">
     <div class="container">
       <div class="row">
-        <div class="col-xs12">
+        <div class="col-xs-12">
 
+          <div class="w3-container text-center">
+            <div class="w3-card-4" style="width: 50%;">
+              <img src="images/NSFT.png" alt="Person" style="max-width: 80%;">
+              <div class="w3-container">
+                <h3><strong>Nestor E. Saavedra</strong></h3>
+                <p>Support & Reliability Engineer | Blockchain & Web3 Enthusiast | Monitoring & Infrastructure</p>
+              </div>
+            </div>
+          </div>
 
-
-
-   <div class="w3-container" align="center">
-
-  <div class="w3-card-4" style="width:50% "  >
-    <img src="images/NSFT.png" alt="Person" style="max-width: 80% ">
-    <div class="w3-container">
-      <h3> <strong>Nestor E. Saavedra </strong> </h3>
-      <p>Support & Reliability Engineer | Blockchain & Web3 Enthusiast | Monitoring & Infrastructure</p>
+        </div>
+      </div>
     </div>
   </div>
-
-
-</div>
+</section>
 
           <h2><u> Computer Science Graduate, @ CSUSB </u></h2>
 			<h2><u> Bachelor's in Computer Science </u></h2>
