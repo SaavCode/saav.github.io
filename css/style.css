@@ -61,6 +61,23 @@ body,
 	
 }
 
+.carousel-indicators.thumbnails li {
+   width: 100px;
+   height: 60px;
+   overflow: hidden;
+   background-color: #333; /* fallback */
+   border-radius: 4px;
+ }
+ 
+ .carousel-indicators.thumbnails li img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   background-color: #444;
+   border: 1px solid #666;
+ }
 
 
 .well{
