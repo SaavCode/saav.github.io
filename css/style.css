@@ -34,6 +34,19 @@ html, body, .view {
    animation: color-animation2 3s infinite linear alternate;
  }
  
+ .carousel-img {
+   width: 100%;
+   height: auto;
+   max-height: 300px;
+   object-fit: contain;
+ }
+ 
+ @media (max-width: 576px) {
+   .carousel-img {
+     max-height: 180px;
+   }
+ }
+ 
  .containerForProjects {
    padding-bottom: 20px;
    background-color: #3E3E40;
