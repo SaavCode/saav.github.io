@@ -65,6 +65,31 @@
       color: white;
       font-size: 1.4rem;
     }
+    /* Light mode navbar link colors */
+body.light-mode .navbar .nav-link,
+body.light-mode .navbar .navbar-brand,
+body.light-mode .navbar .dropdown-toggle {
+  color: #212529 !important; /* Dark text */
+}
+
+body.light-mode .navbar-toggler-icon {
+  filter: invert(1); /* Inverts the white icon to appear black */
+}
+
+
+/* Light mode dropdown */
+body.light-mode .navbar .dropdown-menu {
+  background-color: #ffffff;
+}
+
+body.light-mode .navbar .dropdown-item {
+  color: #212529;
+}
+
+body.light-mode .navbar .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
     body.light-mode {
       background-color: #f8f9fa;
       color: #212529;
@@ -134,12 +159,27 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
+      <!-- Brand -->
       <a class="navbar-brand" href="#">NES</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  
+      <!-- Hamburger -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+  
+      <!-- Collapsed content -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-auto">
+          <!-- Mobile theme toggle inside the nav menu -->
+          <li class="nav-item d-lg-none">
+            <div class="nav-link p-0">
+              <button onclick="toggleTheme()" class="btn btn-outline-light w-100" title="Toggle light/dark mode">
+                <i id="theme-icon-mobile" class="fas fa-moon"></i> Toggle Theme
+              </button>
+            </div>
+          </li>
+  
           <li class="nav-item active">
             <a class="nav-link" href="https://linkedin.com/in/nessaavedra">Resume <span class="sr-only">(current)</span></a>
           </li>
@@ -149,7 +189,8 @@
             </a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="githubDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="githubDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               <img src="images/mark-github-512.png" alt="GitHub" height="15" width="15"> GitHub
             </a>
             <div class="dropdown-menu" aria-labelledby="githubDropdown">
@@ -169,12 +210,16 @@
             </div>
           </li>
         </ul>
-        <button onclick="toggleTheme()" class="theme-toggle" title="Toggle light/dark mode">
-          <i id="theme-icon" class="fas fa-moon"></i>
-        </button>
       </div>
+  
+      <!-- Desktop theme toggle outside collapse -->
+      <button onclick="toggleTheme()" class="theme-toggle ms-2 d-none d-lg-inline-block" title="Toggle light/dark mode">
+        <i id="theme-icon-desktop" class="fas fa-moon"></i>
+      </button>
     </div>
   </nav>
+  
+  
   <div style="height: 70px;"></div>
   <script>
     AOS.init({ duration: 1000, once: true });
@@ -217,24 +262,26 @@
 
 
 
-$1
-  <div class="container-fluid">
-    <div class="card shadow-lg border-0 bg-light px-4 py-4">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h4><u>Computer Science Graduate, @ CSUSB</u></h4>
-          <h5><u>Bachelor's in Computer Science</u></h5>
-          <p class="mt-3">
-            I'm a support and site reliability engineer dedicated to ensuring seamless and reliable experiences for users.
-            I thrive on troubleshooting complex issues, optimizing system performance, and collaborating with teams to deliver exceptional service.
-          </p>
-          <h5 class="mt-4">Focus Areas:</h5>
-          <p>Technical Support • Blockchain & Web3 • System Monitoring • SQL & Backend Operations</p>
+
+  <section class="py-5">
+    <div class="container-fluid">
+      <div class="card shadow-lg border-0 bg-light px-4 py-4">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h4><u>Computer Science Graduate, @ CSUSB</u></h4>
+            <h5><u>Bachelor's in Computer Science</u></h5>
+            <p class="mt-3">
+              I'm a support and site reliability engineer dedicated to ensuring seamless and reliable experiences for users.
+              I thrive on troubleshooting complex issues, optimizing system performance, and collaborating with teams to deliver exceptional service.
+            </p>
+            <h5 class="mt-4">Focus Areas:</h5>
+            <p>Technical Support • Blockchain & Web3 • System Monitoring • SQL & Backend Operations</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
 
 <section class="bg-light py-5">
   <div class="container">
@@ -427,7 +474,8 @@ $1
 <section class="text-center py-5 bg-light" id="contact">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center redtext">
+      <div class="col-lg-12 text-center" style="color: black;">
+
         <h1>How to reach me:</h1>
         <p>Send me an email</p>
         <div class="d-flex justify-content-center">
