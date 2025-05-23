@@ -164,3 +164,31 @@ html, body, .view {
    border-radius: 20px;
  }
  
+  /* Center wrapper */
+  .pill-divider-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+    width: 100%;
+  }
+
+  /* Pill Style */
+  .pill-divider {
+    padding: 14px 36px;
+    background-color: #1e1e2f;
+    color: #ff61d8;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 999px;
+    box-shadow: 0 0 15px rgba(255, 97, 216, 0.4), 0 0 30px rgba(255, 97, 216, 0.2);
+    letter-spacing: 0.6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .pill-divider:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 97, 216, 0.6), 0 0 40px rgba(255, 97, 216, 0.4);
+  }
