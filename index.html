@@ -57,6 +57,17 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+    /* Styles moved from inline block within .nartools-section */
+    .card-hover:hover { /* This style is also defined in styleCaro.css or style.css, consider consolidating */
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .card-img-top { /* Consider if this overrides Bootstrap or is a custom enhancement */
+      object-fit: cover;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
   </style>
 </head>
 
@@ -65,13 +76,13 @@
     <div class="container">
       <!-- Brand -->
       <a class="navbar-brand" href="#">NES</a>
-
+      
       <!-- Hamburger -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      
       <!-- Collapsed content -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
@@ -83,7 +94,7 @@
               </button>
             </div>
           </li>
-
+          
           <li class="nav-item active">
             <a class="nav-link" href="https://linkedin.com/in/nessaavedra"> 📜 Resume <span class="sr-only">(current)</span></a>
           </li>
@@ -130,14 +141,14 @@
           </li>
         </ul>
       </div>
-
+      
       <!-- Desktop theme toggle outside collapse -->
-      <button onclick="toggleTheme()" class="theme-toggle ms-2 d-none d-lg-inline-block" title="Toggle light/dark mode">
+      <button onclick="toggleTheme()" class="theme-toggle ml-2 d-none d-lg-inline-block" title="Toggle light/dark mode">
         <i id="theme-icon-desktop" class="fas fa-moon"></i>
       </button>
     </div>
   </nav>
-
+  
   <!-- Spacer for fixed navbar -->
   <div style="height: 70px;"></div>
 
@@ -150,14 +161,14 @@
       const mobileIcon = document.getElementById("theme-icon-mobile");
       const desktopIcon = document.getElementById("theme-icon-desktop");
       const body = document.body;
-
+      
       if (currentTheme === "light") {
         body.classList.add("light-mode");
         if (mobileIcon) mobileIcon.className = "fas fa-sun";
         if (desktopIcon) desktopIcon.className = "fas fa-sun";
       } else {
         body.classList.remove("light-mode");
-        if (mobileIcon) mobileIcon.className = "fas fa-moon";
+        if (mobileIcon) mobileIcon.className = "fas fa-moon"; 
         if (desktopIcon) desktopIcon.className = "fas fa-moon";
       }
     });
@@ -166,11 +177,11 @@
       const body = document.body;
       const mobileIcon = document.getElementById("theme-icon-mobile");
       const desktopIcon = document.getElementById("theme-icon-desktop");
-
+      
       body.classList.toggle("light-mode");
       const isLight = body.classList.contains("light-mode");
       localStorage.setItem("theme", isLight ? "light" : "dark");
-
+      
       const newIconClass = isLight ? "fas fa-sun" : "fas fa-moon";
       if (mobileIcon) mobileIcon.className = newIconClass;
       if (desktopIcon) desktopIcon.className = newIconClass;
@@ -198,8 +209,8 @@
       <div class="card shadow-lg border-0 bg-light px-4 py-4">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h4><u>Computer Science Graduate, @ CSUSB</u></h4>
-            <h5><u>Bachelor's in Computer Science</u></h5>
+            <h4 class="text-decoration-underline">Computer Science Graduate, @ CSUSB</h4>
+            <h5 class="text-decoration-underline">Bachelor's in Computer Science</h5>
             <p class="mt-3">
               I'm a support and site reliability engineer dedicated to ensuring seamless and reliable experiences for users.
               I thrive on troubleshooting complex issues, optimizing system performance, and collaborating with teams to deliver exceptional service, while also applying UX/UI principles to ensure intuitive and user-friendly experiences. 
@@ -211,12 +222,12 @@
       </div>
     </div>
   </section>
-
+  
 <section class="bg-light py-5">
   <div class="container-fluid px-4">
     <div class="row justify-content-center">
-
-      <!-- Technical Support -->
+      
+      <!-- Technical Support --> 
       <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
         <div class="media">
           <div class="media-left pr-3">
@@ -228,8 +239,8 @@
           </div>
         </div>
       </div>
-
-      <!-- Site Reliability -->
+      
+      <!-- Site Reliability --> 
       <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
         <div class="media">
           <div class="media-left pr-3">
@@ -241,8 +252,8 @@
           </div>
         </div>
       </div>
-
-      <!-- Blockchain & Databases -->
+      
+      <!-- Blockchain & Databases --> 
       <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
         <div class="media">
           <div class="media-left pr-3">
@@ -254,8 +265,8 @@
           </div>
         </div>
       </div>
-
-      <!-- UX/UI Design -->
+      
+      <!-- UX/UI Design --> 
       <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
         <div class="media">
           <div class="media-left pr-3">
@@ -267,13 +278,13 @@
           </div>
         </div>
       </div>
-
+      
     </div>
   </div>
 </section>
 
 
-
+  
 
 
 
@@ -286,23 +297,10 @@
 
 
 <section class="nartools-section text-white py-5" data-aos="fade-up">
-  <style> /* Local style for card-hover if not globally defined */
-    .card-hover:hover { /* This style is also defined in styleCaro.css or style.css, consider consolidating */
-      transform: translateY(-5px);
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .card-img-top {
-      object-fit: cover;
-      border-top-left-radius: 0.5rem;
-      border-top-right-radius: 0.5rem;
-    }
-  </style>
 <!-- NarTools Section -->
 <section class="container my-5">
   <div class="card border-0 shadow-lg rounded-4 p-4" style="background-color: #1b1e22; color: #e6e6e6;">
-
+    
     <div class="text-center mb-5">
       <h2 class="font-weight-bold">🚀 NarTools: Blockchain Activity Visualizer</h2>
       <p class="lead">
@@ -312,7 +310,7 @@
         Launch Web App →
       </a>
     </div>
-
+    
     <div class="row align-items-stretch">
       <div class="col-md-6 mb-4">
         <div class="card border-0 shadow-sm card-hover h-100">
@@ -333,26 +331,26 @@
         </div>
       </div>
     </div>
-
+    
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-5 text-center mb-4">
       <h3 class="font-weight-bold">🧪 Live Preview: NarTools</h3>
       <p class="text-muted">Try a demo of the dashboard right here. For the full experience, click below.</p>
       <a href="https://nartools.onrender.com" target="_blank" class="btn btn-primary mb-3">Open Full App</a>
-    </div>
-
+    </div>    
+    
     <div class="col-md-5 text-center mb-4">
       <h3 class="font-weight-bold">✏️ Figma design: NarTools</h3>
       <p class="text-muted">See the blueprint behind NarTools to see the initial planning and layout.</p>
       <a href="https://www.figma.com/proto/gM5VLe6pVcBX1ATYv4sUzg/Nartools?node-id=2-41&t=rigRxPTfkLSUUPYw-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A41&show-proto-sidebar=1" target="_blank" class="btn btn-primary mb-3">Open design</a>
-    </div>
+    </div>    
   </div>
 </div>
-
+    
     <div class="embed-responsive embed-responsive-16by9 shadow-lg">
       <iframe class="embed-responsive-item" src="https://nartools.onrender.com" allowfullscreen loading="lazy"></iframe>
-    </div>
+    </div>    
   </div>
 </section>
 
@@ -360,19 +358,19 @@
 <div style="
   height: 4px;
   background: linear-gradient(270deg, #ff007a, #ffffff);
-  background-size: 400% 400%;
+  background-size: 400% 400%; 
   animation: pulse-glow 6s ease infinite;
   border-radius: 50px;
   margin: 60px auto;
   max-width: 80%;
 "></div>
-
+  
 
 <!-- Wrapped Uniswap Dashboard Section -->
 <section class="container my-5">
   <div class="card border-0 shadow-lg rounded-4 p-4" style="background-color: #1b1e22; color: #e6e6e6;">
-
-    <div class="text-center mb-5">
+    
+    <div class="text-center mb-5"> 
       <img src="images/uniswap_logo_chart.png" alt="Uniswap Dashboard Logo"
            style="width: 100px; border-radius: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.2);"> <!-- Consider moving to CSS -->
       <h2 class="font-weight-bold mt-3">🦄 Uniswap V3 Dashboard</h2>
@@ -382,8 +380,8 @@
       <a href="https://uniswap-v3-dashboard.onrender.com" target="_blank" class="btn btn-light mt-3">
         Launch Web App →
       </a>
-    </div>
-
+    </div>    
+    
     <div class="row align-items-stretch">
       <div class="col-md-6 mb-4">
         <div class="card border-0 shadow-sm card-hover h-100">
@@ -404,14 +402,14 @@
         </div>
       </div>
     </div>
-
+    
     <div class="text-center mb-4 mt-5">
       <h3 class="font-weight-bold">🧪 Live Preview: Uniswap V3 Dashboard</h3>
       <p class="text-muted">Try a demo of the dashboard right here. For the full experience, click below.</p>
       <a href="https://uniswap-v3-dashboard.onrender.com" target="_blank" class="btn btn-primary mb-3">
         Open Full App
       </a>
-    </div>
+    </div>    
 
     <div class="embed-responsive embed-responsive-16by9 shadow-lg">
       <iframe class="embed-responsive-item"
@@ -422,7 +420,7 @@
 </section>
 
 <!-- Toggle Pill Divider -->
-<div class="pill-divider-wrapper text-center my-5">
+<div class="pill-divider-wrapper">
   <div class="pill-divider"
        data-toggle="collapse"
        data-target="#previousProjects"
@@ -432,10 +430,12 @@
     <span>📁 Previous / Beginning Projects</span>
   </div>
 </div>
+  
+
 
 <!-- Collapsible Section -->
 <div class="collapse" id="previousProjects">
-
+  
   <!-- Recent Work Section -->
   <section class="py-5 text-white bg-dark" data-aos="fade-up">
     <div class="container text-center">
@@ -450,7 +450,7 @@
           <li data-target="#projectCarousel" data-slide-to="5"><img src="images/0_17.jpg" alt="Thumb 6"></li>
         </ol>
         <div class="carousel-inner">
-          <!-- Carousel items (same as your original) -->
+          <!-- Carousel items -->
           <!-- First item -->
           <div class="carousel-item active">
             <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
@@ -476,7 +476,7 @@
               </div>
             </div>
           </div>
-          <!-- Continue all your other items just like above -->
+          <!-- Continue other items just like above -->
           <!-- RGB, Landing Page, Dog Adoption, Stitch Model, etc. -->
           <!-- ... -->
         </div>
@@ -489,7 +489,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Mobile Projects Section -->
   <section class="py-5 text-white bg-secondary" data-aos="fade-up">
     <div class="container text-center">
@@ -550,14 +550,14 @@
       </div>
     </div>
   </section>
-
+  
 </div>
+
 
 <section class="text-center py-5 bg-light" id="contact">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center" style="color: black;">
-
         <h1>How to reach me:</h1>
         <p>Send me an email</p>
         <div class="d-flex justify-content-center">
@@ -568,7 +568,7 @@
   </div>
 </section>
 <hr>
-
+  
 <div class="section well">
   <div class="container">
     <div class="row">
@@ -581,7 +581,7 @@
     </div>
   </div>
 </div>
-
+  
 <footer class="text-center">
   <div class="container">
     <div class="row">
