@@ -334,24 +334,32 @@
     
 <div class="container mt-5">
   <div class="row justify-content-center">
+    <!-- Live Preview Card -->
     <div class="col-md-5 text-center mb-4">
       <h3 class="font-weight-bold">🧪 Live Preview: NarTools</h3>
-      <p class="text-muted">Try a demo of the dashboard right here. For the full experience, click below.</p>
-      <a href="https://nartools.onrender.com" target="_blank" class="btn btn-primary mb-3">Open Full App</a>
+      <p class="text-muted">Try a demo of the dashboard right here. Click below to expand the live preview.</p>
+      <button class="btn btn-primary mb-3" type="button" data-toggle="collapse" data-target="#livePreview" aria-expanded="false" aria-controls="livePreview">
+        Toggle Live Preview
+      </button>
     </div>    
-    
+
+    <!-- Figma Design Card -->
     <div class="col-md-5 text-center mb-4">
       <h3 class="font-weight-bold">✏️ Figma design: NarTools</h3>
-      <p class="text-muted">See the blueprint behind NarTools to see the initial planning and layout.</p>
+      <p class="text-muted">See the blueprint behind NarTools to view the initial planning and layout.</p>
       <a href="https://www.figma.com/proto/gM5VLe6pVcBX1ATYv4sUzg/Nartools?node-id=2-41&t=rigRxPTfkLSUUPYw-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A41&show-proto-sidebar=1" target="_blank" class="btn btn-primary mb-3">Open design</a>
     </div>    
   </div>
-</div>
-    
-    <div class="embed-responsive embed-responsive-16by9 shadow-lg">
-      <iframe class="embed-responsive-item" src="https://nartools.onrender.com" allowfullscreen loading="lazy"></iframe>
-    </div>    
+
+  <!-- Collapsible Iframe Preview -->
+  <div class="collapse" id="livePreview">
+  <div class="iframe-glow-wrapper embed-responsive embed-responsive-16by9 shadow-lg mb-5">
+     <iframe class="embed-responsive-item" src="https://nartools.onrender.com" allowfullscreen loading="lazy"></iframe>
   </div>
+
+  </div>
+</div>
+
 </section>
 
 <!-- Glowing RGB Separator -->
