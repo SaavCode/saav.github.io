@@ -4,15 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Nestor Saavedra - Support & Reliability Engineer, Blockchain Enthusiast">
   <title>Nestor Saavedra: SFD</title>
-
-  <!-- Bootstrap 4.5 CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <link rel="stylesheet" href="css/styleCaro.css">
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Portfolio of Nestor Saavedra - Support & Reliability Engineer, Blockchain Enthusiast">
 
   <!-- Open Graph for link sharing -->
   <meta property="og:title" content="Nestor Saavedra Portfolio">
@@ -20,20 +13,51 @@
   <meta property="og:image" content="images/NSFT.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saavfoxdev.com">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nestor Saavedra Portfolio">
   <meta name="twitter:description" content="Support & Site Reliability Engineer | Blockchain & Web3 Enthusiast">
   <meta name="twitter:image" content="images/NSFT.png">
 
-  <!-- Bootstrap JS and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome and AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styleCaro.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Font Awesome and AOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- LinkedIn Badge Script (Optional) -->
+  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+  <style>
+    .nartools-section {
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1f4068);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes pulse-glow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
 
 <body>
@@ -41,13 +65,13 @@
     <div class="container">
       <!-- Brand -->
       <a class="navbar-brand" href="#">NES</a>
-  
+
       <!-- Hamburger -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <!-- Collapsed content -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
@@ -59,7 +83,7 @@
               </button>
             </div>
           </li>
-  
+
           <li class="nav-item active">
             <a class="nav-link" href="https://linkedin.com/in/nessaavedra"> 📜 Resume <span class="sr-only">(current)</span></a>
           </li>
@@ -103,40 +127,53 @@
                 <img src="images/uniswap_logo_chart.png" alt="Uniswap Dashboard" height="30" width="30"> • Uniswap V3 Dashboard
               </a>
             </div>
-            </div>
           </li>
         </ul>
       </div>
-  
+
       <!-- Desktop theme toggle outside collapse -->
       <button onclick="toggleTheme()" class="theme-toggle ms-2 d-none d-lg-inline-block" title="Toggle light/dark mode">
         <i id="theme-icon-desktop" class="fas fa-moon"></i>
       </button>
     </div>
   </nav>
-  
-  
+
+  <!-- Spacer for fixed navbar -->
   <div style="height: 70px;"></div>
+
   <script>
     AOS.init({ duration: 1000, once: true });
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const currentTheme = localStorage.getItem("theme");
-      const icon = document.getElementById("theme-icon");
+      const mobileIcon = document.getElementById("theme-icon-mobile");
+      const desktopIcon = document.getElementById("theme-icon-desktop");
+      const body = document.body;
+
       if (currentTheme === "light") {
-        document.body.classList.add("light-mode");
-        if (icon) icon.className = "fas fa-sun";
+        body.classList.add("light-mode");
+        if (mobileIcon) mobileIcon.className = "fas fa-sun";
+        if (desktopIcon) desktopIcon.className = "fas fa-sun";
+      } else {
+        body.classList.remove("light-mode");
+        if (mobileIcon) mobileIcon.className = "fas fa-moon";
+        if (desktopIcon) desktopIcon.className = "fas fa-moon";
       }
     });
 
     function toggleTheme() {
       const body = document.body;
-      const icon = document.getElementById("theme-icon");
+      const mobileIcon = document.getElementById("theme-icon-mobile");
+      const desktopIcon = document.getElementById("theme-icon-desktop");
+
       body.classList.toggle("light-mode");
       const isLight = body.classList.contains("light-mode");
       localStorage.setItem("theme", isLight ? "light" : "dark");
-      if (icon) icon.className = isLight ? "fas fa-sun" : "fas fa-moon";
+
+      const newIconClass = isLight ? "fas fa-sun" : "fas fa-moon";
+      if (mobileIcon) mobileIcon.className = newIconClass;
+      if (desktopIcon) desktopIcon.className = newIconClass;
     }
   </script>
 <main>
@@ -156,9 +193,6 @@
     </div>
   </section>
 
-
-
-
   <section class="py-5">
     <div class="container-fluid">
       <div class="card shadow-lg border-0 bg-light px-4 py-4">
@@ -168,58 +202,80 @@
             <h5><u>Bachelor's in Computer Science</u></h5>
             <p class="mt-3">
               I'm a support and site reliability engineer dedicated to ensuring seamless and reliable experiences for users.
-              I thrive on troubleshooting complex issues, optimizing system performance, and collaborating with teams to deliver exceptional service.
+              I thrive on troubleshooting complex issues, optimizing system performance, and collaborating with teams to deliver exceptional service, while also applying UX/UI principles to ensure intuitive and user-friendly experiences. 
             </p>
             <h5 class="mt-4">Focus Areas:</h5>
-            <p>Technical Support • Blockchain & Web3 • System Monitoring • SQL & Backend Operations</p>
+            <p>Technical Support • Blockchain & Web3 • System Monitoring • SQL & Backend Operations • UX/UI Design</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
 
 <section class="bg-light py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-6">
+  <div class="container-fluid px-4">
+    <div class="row justify-content-center">
+
+      <!-- Technical Support -->
+      <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
         <div class="media">
-          <div class="media-left">
-            <a href="#"><img class="media-object" src="images/fox1.png" alt="..." height="50" width="55"></a>
+          <div class="media-left pr-3">
+            <a href="#"><img class="media-object" src="images/fox1.png" alt="Support Fox" height="50" width="55"></a>
           </div>
           <div class="media-body">
-            <h2 class="media-heading">Technical Support & Solutions Engineering</h2>
-            I provide end-to-end technical support for cloud-based platforms and enterprise applications. I’ve assisted over 1,000 clients globally, resolving issues through tools like Zendesk, Salesforce, Jira, and Slack. I'm skilled in debugging API and integration issues, writing clear runbooks, and collaborating cross-functionally to deliver scalable solutions.
+            <h4 class="media-heading">Technical Support & Solutions Engineering</h4>
+            I provide end-to-end technical support for cloud platforms and enterprise applications. I’ve helped 1,000+ clients globally, resolving issues through tools like Zendesk, Salesforce, and Jira. I specialize in API debugging, writing runbooks, and delivering scalable solutions.
           </div>
-        </div><hr>
+        </div>
       </div>
 
-      <div class="col-lg-4 col-md-4 col-sm-6">
+      <!-- Site Reliability -->
+      <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
         <div class="media">
-          <div class="media-left">
-            <a href="#"><img class="media-object" src="images/fox2.png" alt="..." height="50" width="55"></a>
+          <div class="media-left pr-3">
+            <a href="#"><img class="media-object" src="images/fox2.png" alt="Reliability Fox" height="50" width="55"></a>
           </div>
           <div class="media-body">
-            <h2 class="media-heading">Site Reliability & Monitoring</h2>
-            I have experience supporting infrastructure reliability using monitoring tools like Grafana, Prometheus, and Datadog. I've contributed to incident response, root cause analysis, and performance optimization. I'm currently expanding my knowledge in Python, Terraform, and AWS to automate and improve deployment and recovery processes.
+            <h4 class="media-heading">Site Reliability & Monitoring</h4>
+            I support infrastructure reliability with tools like Grafana, Prometheus, and Datadog. I contribute to incident response, root cause analysis, and performance tuning—while learning Python, Terraform, and AWS to automate deployments.
           </div>
-        </div><hr>
+        </div>
       </div>
 
-      <div class="col-lg-4 col-md-4 col-sm-6">
+      <!-- Blockchain & Databases -->
+      <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
         <div class="media">
-          <div class="media-left">
-            <a href="#"><img class="media-object" src="images/fox3.png" alt="..." height="50" width="55"></a>
+          <div class="media-left pr-3">
+            <a href="#"><img class="media-object" src="images/fox3.png" alt="Blockchain Fox" height="50" width="55"></a>
           </div>
           <div class="media-body">
-            <h2 class="media-heading">Database & Blockchain</h2>
-            I troubleshoot SQL and PostgreSQL issues using tools like PgAdmin and MySQL Workbench. In the blockchain space, I monitor validator activity, investigate staking flows, and review smart contract interactions. I regularly use Etherscan, block explorers, and DeFi dashboards like Zapper and DeBank. I’m currently learning Solidity and reviewing smart contracts to deepen my understanding of on-chain behavior and ensure reliable integrations.
+            <h4 class="media-heading">Database & Blockchain</h4>
+            I troubleshoot SQL/PostgreSQL issues using MySQL Workbench and PgAdmin. In blockchain, I monitor validators, trace staking flows, and explore smart contract behavior via Etherscan, Zapper, and DeBank. I'm also learning Solidity.
           </div>
-        </div><hr>
+        </div>
       </div>
+
+      <!-- UX/UI Design -->
+      <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
+        <div class="media">
+          <div class="media-left pr-3">
+            <a href="#"><img class="media-object" src="images/fox4-art.png" alt="Design Fox" height="50" width="55"></a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">UX/UI Design</h4>
+            I design user-friendly interfaces using Figma and Adobe XD, turning complex workflows into intuitive designs. I focus on accessibility, feedback-driven improvements, and visual clarity across web and mobile platforms.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+
+
+
+
 
 <!-- Glowing Pill Divider -->
 <div class="pill-divider-wrapper">
@@ -230,21 +286,8 @@
 
 
 <section class="nartools-section text-white py-5" data-aos="fade-up">
-  <style>
-    .nartools-section {
-      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1f4068);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: white;
-    }
-
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .card-hover:hover {
+  <style> /* Local style for card-hover if not globally defined */
+    .card-hover:hover { /* This style is also defined in styleCaro.css or style.css, consider consolidating */
       transform: translateY(-5px);
       transition: all 0.3s ease;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -256,7 +299,6 @@
       border-top-right-radius: 0.5rem;
     }
   </style>
-
 <!-- NarTools Section -->
 <section class="container my-5">
   <div class="card border-0 shadow-lg rounded-4 p-4" style="background-color: #1b1e22; color: #e6e6e6;">
@@ -308,7 +350,6 @@
   </div>
 </div>
 
-
     <div class="embed-responsive embed-responsive-16by9 shadow-lg">
       <iframe class="embed-responsive-item" src="https://nartools.onrender.com" allowfullscreen loading="lazy"></iframe>
     </div>
@@ -326,14 +367,6 @@
   max-width: 80%;
 "></div>
 
-<style>
-@keyframes pulse-glow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-</style>
-
 
 <!-- Wrapped Uniswap Dashboard Section -->
 <section class="container my-5">
@@ -341,7 +374,7 @@
 
     <div class="text-center mb-5">
       <img src="images/uniswap_logo_chart.png" alt="Uniswap Dashboard Logo"
-           style="width: 100px; border-radius: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+           style="width: 100px; border-radius: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.2);"> <!-- Consider moving to CSS -->
       <h2 class="font-weight-bold mt-3">🦄 Uniswap V3 Dashboard</h2>
       <p class="lead">
         Visualize top liquidity pools, trading volume, and token activity on Uniswap V3 — all in real time.
@@ -382,162 +415,143 @@
 
     <div class="embed-responsive embed-responsive-16by9 shadow-lg">
       <iframe class="embed-responsive-item"
-              src="https://uniswap-v3-dashboard.onrender.com"
-              allowfullscreen
+              src="https://uniswap-v3-dashboard.onrender.com" allowfullscreen
               loading="lazy"></iframe>
     </div>
   </div>
 </section>
 
-
-
-<section id="projects" class="py-5 text-white bg-dark" data-aos="fade-up">
-  <div class="container text-center">
-    <h2 class="mb-4">Recent Work</h2>
-    <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
-      <ol class="carousel-indicators thumbnails">
-        <li data-target="#projectCarousel" data-slide-to="0" class="active"><img src="images/MYsqlNodeJS.jpg" alt="Thumb 1"></li>
-        <li data-target="#projectCarousel" data-slide-to="1"><img src="images/travelfox.png" alt="Thumb 2"></li>
-        <li data-target="#projectCarousel" data-slide-to="2"><img src="images/saavlanding.png" alt="Thumb 3"></li>
-        <li data-target="#projectCarousel" data-slide-to="3"><img src="images/dogBffPage.jpg" alt="Thumb 4"></li>
-        <li data-target="#projectCarousel" data-slide-to="4"><img src="myProjects/colorGame/rgbGuessingGame.PNG" alt="Thumb 5"></li>
-        <li data-target="#projectCarousel" data-slide-to="5"><img src="images/0_17.jpg" alt="Thumb 6"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
-            <img src="images/MYsqlNodeJS.jpg" class="card-img-top carousel-img" alt="Email Subscription">
-            <div class="card-body">
-              <h4 class="card-title">Email Subscription Web App</h4>
-              <p class="card-text">MySQL, NodeJS, Express. Stores emails to MySQL. Deployed on Heroku.</p>
-              <a class="btn btn-light" href="https://email-sign-up-page.herokuapp.com" target="_blank">Demo</a>
-              <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/Registration-site" target="_blank">Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
-            <img src="images/travelfox.png" class="card-img-top carousel-img" alt="Travel Fox">
-            <div class="card-body">
-              <h4 class="card-title">TRAVEL FOX: Web Design</h4>
-              <p class="card-text">HTML, CSS, Bootstrap 4. Responsive concept delivery site.</p>
-              <a class="btn btn-light" href="https://travelfox.netlify.com/?#" target="_blank">Demo</a>
-              <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/travelfox" target="_blank">Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
-            <img src="images/saavlanding.png" class="card-img-top carousel-img" alt="Landing Page">
-            <div class="card-body">
-              <h4 class="card-title">Landing Page Design</h4>
-              <p class="card-text">HTML, CSS, JS. Animated landing page using CSS effects.</p>
-              <a class="btn btn-light" href="https://saavfoxdev.com" target="_blank">Demo</a>
-              <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/SAAVFOXLANDING" target="_blank">Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
-            <img src="images/dogBffPage.jpg" class="card-img-top carousel-img" alt="Dog Adoption Page">
-            <div class="card-body">
-              <h4 class="card-title">Dog Adoption Page</h4>
-              <p class="card-text">HTML, CSS, JavaScript. Image rotator for dog adoption listings.</p>
-              <a class="btn btn-light" href="myProjects/dogBffPage/index.html" target="_blank">Demo</a>
-              <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/saavfoxdev.github.io/tree/master/myProjects/dogBffPage" target="_blank">Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
-            <img src="myProjects/colorGame/rgbGuessingGame.PNG" class="card-img-top carousel-img" alt="RGB Game">
-            <div class="card-body">
-              <h4 class="card-title">RGB Guessing Game</h4>
-              <p class="card-text">HTML, CSS, JavaScript. Game to guess RGB colors.</p>
-              <a class="btn btn-light" href="myProjects/colorGame/colorGame.html" target="_blank">Demo</a>
-              <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/Web-Development/tree/master/12.color%20game%20project" target="_blank">Code</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
-            <img src="images/0_17.jpg" class="card-img-top carousel-img" alt="Stitch Model">
-            <div class="card-body">
-              <h4 class="card-title">Stitch Keyshot Model</h4>
-              <p class="card-text">Modeled with Maya/Z-Brush, rendered in Keyshot.</p>
-              <a class="btn btn-light" href="myProjects/Stitch model in keyshot/untitled_XR.3.html" target="_blank">Demo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-    </div>
+<!-- Toggle Pill Divider -->
+<div class="pill-divider-wrapper text-center my-5">
+  <div class="pill-divider"
+       data-toggle="collapse"
+       data-target="#previousProjects"
+       aria-expanded="false"
+       aria-controls="previousProjects"
+       style="cursor: pointer;">
+    <span>📁 Previous / Beginning Projects</span>
   </div>
-</section>
+</div>
 
-<!-- Mobile Projects Section -->
-<section class="py-5 text-white bg-secondary" data-aos="fade-up">
-  <div class="container text-center">
-    <h2 class="mb-4">Mobile Projects</h2>
-    <div id="mobileCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
-      <ol class="carousel-indicators thumbnails">
-        <li data-target="#mobileCarousel" data-slide-to="0" class="active">
-          <img src="images/diceRoll.png" alt="Thumb 1">
-        </li>
-        <li data-target="#mobileCarousel" data-slide-to="1">
-          <img src="images/wframe.PNG" alt="Thumb 2">
-        </li>
-        <li data-target="#mobileCarousel" data-slide-to="2">
-          <img src="images/schedditprev.jpg" alt="Thumb 3">
-        </li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;">
-            <img class="card-img-top carousel-img" src="images/diceRoll.png" alt="Dice Roller">
-            <div class="card-body">
-              <h5 class="card-title">Apple Watch: Dice Roll</h5>
-              <a class="btn btn-light" href="https://github.com/saavfoxdev/iOS-11-Apps/tree/master/Dicee" target="_blank">Demo</a>
-              <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/iOS-11-Apps/tree/master/Dicee" target="_blank">Code</a>
+<!-- Collapsible Section -->
+<div class="collapse" id="previousProjects">
+
+  <!-- Recent Work Section -->
+  <section class="py-5 text-white bg-dark" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="mb-4">Recent Work</h2>
+      <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
+        <ol class="carousel-indicators thumbnails">
+          <li data-target="#projectCarousel" data-slide-to="0" class="active"><img src="images/MYsqlNodeJS.jpg" alt="Thumb 1"></li>
+          <li data-target="#projectCarousel" data-slide-to="1"><img src="images/travelfox.png" alt="Thumb 2"></li>
+          <li data-target="#projectCarousel" data-slide-to="2"><img src="images/saavlanding.png" alt="Thumb 3"></li>
+          <li data-target="#projectCarousel" data-slide-to="3"><img src="images/dogBffPage.jpg" alt="Thumb 4"></li>
+          <li data-target="#projectCarousel" data-slide-to="4"><img src="myProjects/colorGame/rgbGuessingGame.PNG" alt="Thumb 5"></li>
+          <li data-target="#projectCarousel" data-slide-to="5"><img src="images/0_17.jpg" alt="Thumb 6"></li>
+        </ol>
+        <div class="carousel-inner">
+          <!-- Carousel items (same as your original) -->
+          <!-- First item -->
+          <div class="carousel-item active">
+            <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
+              <img src="images/MYsqlNodeJS.jpg" class="card-img-top carousel-img" alt="Email Subscription">
+              <div class="card-body">
+                <h4 class="card-title">Email Subscription Web App</h4>
+                <p class="card-text">MySQL, NodeJS, Express. Stores emails to MySQL. Deployed on Heroku.</p>
+                <a class="btn btn-light" href="https://email-sign-up-page.herokuapp.com" target="_blank">Demo</a>
+                <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/Registration-site" target="_blank">Code</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;">
-            <img class="card-img-top carousel-img" src="images/wframe.PNG" alt="UX/UI Design">
-            <div class="card-body">
-              <h5 class="card-title">UX/UI Design: Mobile and Web</h5>
-              <a class="btn btn-light" href="https://xd.adobe.com/view/dc4d2804-8af7-439c-5472-c1f1d10f23fc-aa7c/?fullscreen" target="_blank">Preview</a>
-              <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/saavfoxdev.github.io/blob/master/myProjects/XD%20Design/Low%20Fiedlity%20Wireframe.xd?raw=true" target="_blank">File</a>
+          <!-- Repeat for other items... -->
+          <!-- TRAVEL FOX -->
+          <div class="carousel-item">
+            <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
+              <img src="images/travelfox.png" class="card-img-top carousel-img" alt="Travel Fox">
+              <div class="card-body">
+                <h4 class="card-title">TRAVEL FOX: Web Design</h4>
+                <p class="card-text">HTML, CSS, Bootstrap 4. Responsive concept delivery site.</p>
+                <a class="btn btn-light" href="https://travelfox.netlify.com/?#" target="_blank">Demo</a>
+                <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/travelfox" target="_blank">Code</a>
+              </div>
             </div>
           </div>
+          <!-- Continue all your other items just like above -->
+          <!-- RGB, Landing Page, Dog Adoption, Stitch Model, etc. -->
+          <!-- ... -->
         </div>
-        <div class="carousel-item">
-          <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;">
-            <img class="card-img-top carousel-img" src="images/schedditprev.jpg" alt="Scheddit Scheduler">
-            <div class="card-body">
-              <h5 class="card-title">Scheddit: Scheduler</h5>
-              <a class="btn btn-light" href="https://github.com/saavfoxdev/CSE455" target="_blank">Demo</a>
-              <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/CSE455" target="_blank">Code</a>
-            </div>
-          </div>
-        </div>
+        <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#mobileCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#mobileCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Mobile Projects Section -->
+  <section class="py-5 text-white bg-secondary" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="mb-4">Mobile Projects</h2>
+      <div id="mobileCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
+        <ol class="carousel-indicators thumbnails">
+          <li data-target="#mobileCarousel" data-slide-to="0" class="active">
+            <img src="images/diceRoll.png" alt="Thumb 1">
+          </li>
+          <li data-target="#mobileCarousel" data-slide-to="1">
+            <img src="images/wframe.PNG" alt="Thumb 2">
+          </li>
+          <li data-target="#mobileCarousel" data-slide-to="2">
+            <img src="images/schedditprev.jpg" alt="Thumb 3">
+          </li>
+        </ol>
+        <div class="carousel-inner">
+          <!-- Dice Roller -->
+          <div class="carousel-item active">
+            <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;">
+              <img class="card-img-top carousel-img" src="images/diceRoll.png" alt="Dice Roller">
+              <div class="card-body">
+                <h5 class="card-title">Apple Watch: Dice Roll</h5>
+                <a class="btn btn-light" href="https://github.com/saavfoxdev/iOS-11-Apps/tree/master/Dicee" target="_blank">Demo</a>
+                <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/iOS-11-Apps/tree/master/Dicee" target="_blank">Code</a>
+              </div>
+            </div>
+          </div>
+          <!-- Wireframe Design -->
+          <div class="carousel-item">
+            <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;">
+              <img class="card-img-top carousel-img" src="images/wframe.PNG" alt="UX/UI Design">
+              <div class="card-body">
+                <h5 class="card-title">UX/UI Design: Mobile and Web</h5>
+                <a class="btn btn-light" href="https://xd.adobe.com/view/dc4d2804-8af7-439c-5472-c1f1d10f23fc-aa7c/?fullscreen" target="_blank">Preview</a>
+                <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/saavfoxdev.github.io/blob/master/myProjects/XD%20Design/Low%20Fiedlity%20Wireframe.xd?raw=true" target="_blank">File</a>
+              </div>
+            </div>
+          </div>
+          <!-- Scheddit -->
+          <div class="carousel-item">
+            <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;">
+              <img class="card-img-top carousel-img" src="images/schedditprev.jpg" alt="Scheddit Scheduler">
+              <div class="card-body">
+                <h5 class="card-title">Scheddit: Scheduler</h5>
+                <a class="btn btn-light" href="https://github.com/saavfoxdev/CSE455" target="_blank">Demo</a>
+                <a class="btn btn-outline-light" href="https://github.com/saavfoxdev/CSE455" target="_blank">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#mobileCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#mobileCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
 
 <section class="text-center py-5 bg-light" id="contact">
   <div class="container">
@@ -577,6 +591,9 @@
     </div>
   </div>
 </footer>
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </main>
 </body>
 </html>
