@@ -68,6 +68,25 @@
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
     }
+    /* Custom class for the glowing RGB separator */
+    .rgb-separator {
+      height: 4px;
+      background: linear-gradient(270deg, #ff007a, #ffffff);
+      background-size: 400% 400%;
+      animation: pulse-glow 6s ease infinite;
+      border-radius: 50px;
+      margin: 60px auto;
+      max-width: 80%;
+    }
+    /* Custom class for clickable elements like pill dividers */
+    .clickable-pill {
+      cursor: pointer;
+    }
+    /* Custom class for toggle arrows in collapsible sections */
+    .toggle-arrow {
+      display: inline-block;
+      transition: transform 0.3s;
+    }
   </style>
 </head>
 
@@ -122,7 +141,7 @@
                 <img src="images/Python.png" alt="Py" height="30" width="25"> • Python
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item"> Blockchain </a>
+              <h6 class="dropdown-header">Blockchain</h6>
               <a class="dropdown-item" href="https://github.com/SaavCode/ethDenver-Bootcamp-22">
                 <img src="images/Ethereum.png" alt="Ethereum" height="30" width="30"> • ETH Denver 2022
               </a>
@@ -130,7 +149,7 @@
                 <img src="images/postman.png" alt="postman" height="30" width="30"> • API | Blockchain Onboarding
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item"> My Web Apps: </a>
+              <h6 class="dropdown-header">My Web Apps:</h6>
               <a class="dropdown-item" href="https://nartools.onrender.com">
                 <img src="images/nar.png" alt="Nartools" height="30" width="30"> • NarTools Multi-Chain Metrics
               </a>
@@ -193,7 +212,7 @@
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="card shadow-lg border-0 card-hover">
-            <img src="images/NSFT.png" class="card-img-top mx-auto d-block" alt="Nestor" style="max-width: 80%; padding-top: 1rem;">
+            <img src="images/NSFT.png" class="card-img-top mx-auto d-block" alt="Nestor" style="max-width: 80%; padding-top: 1rem;"> <!-- Consider moving style to CSS -->
             <div class="card-body text-center">
               <h3 class="card-title font-weight-bold">Nestor E. Saavedra</h3>
               <p class="card-text">Support & Reliability Engineer<br>Blockchain & Web3 Enthusiast<br>Monitoring & Infrastructure<br>UX/UI Designer</p>
@@ -290,7 +309,7 @@
 
 <!-- Glowing Pill Divider -->
 <div class="pill-divider-wrapper">
-  <div class="pill-divider">
+  <div class="pill-divider"> <!-- Consider making the span a heading (e.g. <h2>) for semantics -->
     <span>💼 My Current Projects</span>
   </div>
 </div>
@@ -298,7 +317,7 @@
 
 <section class="nartools-section text-white py-5" data-aos="fade-up">
 <!-- NarTools Section -->
-<section class="container my-5">
+<section class="container my-5"> <!-- Consider moving style to CSS: style="background-color: #1b1e22; color: #e6e6e6;" -->
   <div class="card border-0 shadow-lg rounded-4 p-4" style="background-color: #1b1e22; color: #e6e6e6;">
     
     <div class="text-center mb-5">
@@ -334,49 +353,56 @@
     
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <!-- Live Preview Card -->
-    <div class="col-md-5 text-center mb-4">
-      <h3 class="font-weight-bold">🧪 Live Preview: NarTools</h3>
-      <p class="text-muted">Try a demo of the dashboard right here. Click below to expand the live preview.</p>
-      <button class="btn btn-primary mb-3" type="button" data-toggle="collapse" data-target="#livePreview" aria-expanded="false" aria-controls="livePreview">
-        Toggle Live Preview
-      </button>
-    </div>    
 
     <!-- Figma Design Card -->
     <div class="col-md-5 text-center mb-4">
       <h3 class="font-weight-bold">✏️ Figma design: NarTools</h3>
       <p class="text-muted">See the blueprint behind NarTools to view the initial planning and layout.</p>
       <a href="https://www.figma.com/proto/gM5VLe6pVcBX1ATYv4sUzg/Nartools?node-id=2-41&t=rigRxPTfkLSUUPYw-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A41&show-proto-sidebar=1" target="_blank" class="btn btn-primary mb-3">Open design</a>
-    </div>    
-  </div>
+    </div>
 
-  <!-- Collapsible Iframe Preview -->
-  <div class="collapse" id="livePreview">
-  <div class="iframe-glow-wrapper embed-responsive embed-responsive-16by9 shadow-lg mb-5">
-     <iframe class="embed-responsive-item" src="https://nartools.onrender.com" allowfullscreen loading="lazy"></iframe>
-  </div>
+    <!-- Live Preview Card -->
+    <div class="col-md-5 text-center mb-4">
+      <h3 class="font-weight-bold">🧪 Live Preview: NarTools</h3>
+      <p class="text-muted">Try a demo of the dashboard right here. Click below to expand the live preview.</p>
+
+      <button class="btn btn-primary mb-3 d-inline-flex align-items-center"
+              type="button"
+              data-toggle="collapse"
+              data-target="#livePreview"
+              aria-expanded="false"
+              aria-controls="livePreview"
+              onclick="this.querySelector('.arrow').classList.toggle('rotate')">
+        Toggle Live Preview
+        <span class="arrow toggle-arrow ml-2">▼</span>
+      </button>
+    </div>
+
+    <!-- Collapsible Iframe Preview -->
+    <div class="col-12">
+      <div class="collapse" id="livePreview">
+        <div class="iframe-glow-wrapper embed-responsive embed-responsive-16by9 shadow-lg mb-5">
+          <iframe class="embed-responsive-item"
+                  src="https://nartools.onrender.com"
+                  allowfullscreen
+                  loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>
 
+
 </section>
 
 <!-- Glowing RGB Separator -->
-<div style="
-  height: 4px;
-  background: linear-gradient(270deg, #ff007a, #ffffff);
-  background-size: 400% 400%; 
-  animation: pulse-glow 6s ease infinite;
-  border-radius: 50px;
-  margin: 60px auto;
-  max-width: 80%;
-"></div>
+<div class="rgb-separator"></div>
   
 
 <!-- Wrapped Uniswap Dashboard Section -->
 <section class="container my-5">
-  <div class="card border-0 shadow-lg rounded-4 p-4" style="background-color: #1b1e22; color: #e6e6e6;">
+  <div class="card border-0 shadow-lg rounded-4 p-4" style="background-color: #1b1e22; color: #e6e6e6;"> <!-- Consider moving style to CSS -->
     
     <div class="text-center mb-5"> 
       <img src="images/uniswap_logo_chart.png" alt="Uniswap Dashboard Logo"
@@ -411,20 +437,33 @@
       </div>
     </div>
     
-    <div class="text-center mb-4 mt-5">
-      <h3 class="font-weight-bold">🧪 Live Preview: Uniswap V3 Dashboard</h3>
-      <p class="text-muted">Try a demo of the dashboard right here. For the full experience, click below.</p>
-      <a href="https://uniswap-v3-dashboard.onrender.com" target="_blank" class="btn btn-primary mb-3">
-        Open Full App
-      </a>
-    </div>    
+<!-- Uniswap Preview Toggle Section -->
+<div class="text-center mb-4 mt-5">
+  <h3 class="font-weight-bold">🧪 Live Preview: Uniswap V3 Dashboard</h3>
+  <p class="text-muted">Try a demo of the dashboard right here. Click below to expand the live preview.</p>
 
-    <div class="embed-responsive embed-responsive-16by9 shadow-lg">
-      <iframe class="embed-responsive-item"
-              src="https://uniswap-v3-dashboard.onrender.com" allowfullscreen
-              loading="lazy"></iframe>
-    </div>
+  <button class="btn btn-primary mb-3 d-inline-flex align-items-center"
+          type="button"
+          data-toggle="collapse"
+          data-target="#uniswapPreview"
+          aria-expanded="false"
+          aria-controls="uniswapPreview"
+          onclick="this.querySelector('.arrow').classList.toggle('rotate')">
+    Toggle Live Preview
+    <span class="arrow toggle-arrow ml-2">▼</span>
+  </button>
+</div>
+
+<!-- Collapsible Iframe -->
+<div class="collapse" id="uniswapPreview">
+  <div class="iframe-glow-wrapper embed-responsive embed-responsive-16by9 shadow-lg mb-5">
+    <iframe class="embed-responsive-item"
+            src="https://uniswap-v3-dashboard.onrender.com"
+            allowfullscreen
+            loading="lazy"></iframe>
   </div>
+</div>
+
 </section>
 
 <!-- Toggle Pill Divider -->
@@ -433,9 +472,8 @@
        data-toggle="collapse"
        data-target="#previousProjects"
        aria-expanded="false"
-       aria-controls="previousProjects"
-       style="cursor: pointer;">
-    <span>📁 Previous / Beginning Projects</span>
+       aria-controls="previousProjects" class="clickable-pill">
+    <span>📁 Previous / Beginning Projects</span> <!-- Consider making the span a heading (e.g. <h2>) for semantics -->
   </div>
 </div>
   
@@ -450,18 +488,18 @@
       <h2 class="mb-4">Recent Work</h2>
       <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
         <ol class="carousel-indicators thumbnails">
-          <li data-target="#projectCarousel" data-slide-to="0" class="active"><img src="images/MYsqlNodeJS.jpg" alt="Thumb 1"></li>
-          <li data-target="#projectCarousel" data-slide-to="1"><img src="images/travelfox.png" alt="Thumb 2"></li>
-          <li data-target="#projectCarousel" data-slide-to="2"><img src="images/saavlanding.png" alt="Thumb 3"></li>
-          <li data-target="#projectCarousel" data-slide-to="3"><img src="images/dogBffPage.jpg" alt="Thumb 4"></li>
-          <li data-target="#projectCarousel" data-slide-to="4"><img src="myProjects/colorGame/rgbGuessingGame.PNG" alt="Thumb 5"></li>
-          <li data-target="#projectCarousel" data-slide-to="5"><img src="images/0_17.jpg" alt="Thumb 6"></li>
+          <li data-target="#projectCarousel" data-slide-to="0" class="active"><img src="images/MYsqlNodeJS.jpg" alt="Email Subscription App Thumbnail"></li>
+          <li data-target="#projectCarousel" data-slide-to="1"><img src="images/travelfox.png" alt="Travel Fox Website Thumbnail"></li>
+          <li data-target="#projectCarousel" data-slide-to="2"><img src="images/saavlanding.png" alt="SaavLanding Page Thumbnail"></li>
+          <li data-target="#projectCarousel" data-slide-to="3"><img src="images/dogBffPage.jpg" alt="Dog BFF Page Thumbnail"></li>
+          <li data-target="#projectCarousel" data-slide-to="4"><img src="myProjects/colorGame/rgbGuessingGame.PNG" alt="RGB Color Game Thumbnail"></li>
+          <li data-target="#projectCarousel" data-slide-to="5"><img src="images/0_17.jpg" alt="Stitch 3D Model Thumbnail"></li>
         </ol>
         <div class="carousel-inner">
           <!-- Carousel items -->
           <!-- First item -->
           <div class="carousel-item active">
-            <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
+            <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;"> <!-- Consider moving style to CSS -->
               <img src="images/MYsqlNodeJS.jpg" class="card-img-top carousel-img" alt="Email Subscription">
               <div class="card-body">
                 <h4 class="card-title">Email Subscription Web App</h4>
@@ -473,7 +511,7 @@
           </div>
           <!-- Repeat for other items... -->
           <!-- TRAVEL FOX -->
-          <div class="carousel-item">
+          <div class="carousel-item"> <!-- Consider moving style to CSS: style="max-width: 600px;" -->
             <div class="card bg-secondary card-hover mx-auto" style="max-width: 600px;">
               <img src="images/travelfox.png" class="card-img-top carousel-img" alt="Travel Fox">
               <div class="card-body">
@@ -504,20 +542,20 @@
       <h2 class="mb-4">Mobile Projects</h2>
       <div id="mobileCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
         <ol class="carousel-indicators thumbnails">
-          <li data-target="#mobileCarousel" data-slide-to="0" class="active">
-            <img src="images/diceRoll.png" alt="Thumb 1">
+          <li data-target="#mobileCarousel" data-slide-to="0" class="active"> 
+            <img src="images/diceRoll.png" alt="Dice Roll App Thumbnail">
           </li>
-          <li data-target="#mobileCarousel" data-slide-to="1">
-            <img src="images/wframe.PNG" alt="Thumb 2">
+          <li data-target="#mobileCarousel" data-slide-to="1"> 
+            <img src="images/wframe.PNG" alt="Mobile Wireframe Design Thumbnail">
           </li>
-          <li data-target="#mobileCarousel" data-slide-to="2">
-            <img src="images/schedditprev.jpg" alt="Thumb 3">
+          <li data-target="#mobileCarousel" data-slide-to="2"> 
+            <img src="images/schedditprev.jpg" alt="Scheddit Scheduler App Thumbnail">
           </li>
         </ol>
         <div class="carousel-inner">
           <!-- Dice Roller -->
           <div class="carousel-item active">
-            <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;">
+            <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;"> <!-- Consider moving style to CSS -->
               <img class="card-img-top carousel-img" src="images/diceRoll.png" alt="Dice Roller">
               <div class="card-body">
                 <h5 class="card-title">Apple Watch: Dice Roll</h5>
@@ -527,7 +565,7 @@
             </div>
           </div>
           <!-- Wireframe Design -->
-          <div class="carousel-item">
+          <div class="carousel-item"> <!-- Consider moving style to CSS: style="max-width: 600px;" -->
             <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;">
               <img class="card-img-top carousel-img" src="images/wframe.PNG" alt="UX/UI Design">
               <div class="card-body">
@@ -538,7 +576,7 @@
             </div>
           </div>
           <!-- Scheddit -->
-          <div class="carousel-item">
+          <div class="carousel-item"> <!-- Consider moving style to CSS: style="max-width: 600px;" -->
             <div class="card bg-dark card-hover mx-auto" style="max-width: 600px;">
               <img class="card-img-top carousel-img" src="images/schedditprev.jpg" alt="Scheddit Scheduler">
               <div class="card-body">
@@ -565,7 +603,7 @@
 <section class="text-center py-5 bg-light" id="contact">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center" style="color: black;">
+      <div class="col-lg-12 text-center" style="color: black;"> <!-- Consider moving style to CSS -->
         <h1>How to reach me:</h1>
         <p>Send me an email</p>
         <div class="d-flex justify-content-center">

@@ -214,7 +214,10 @@ html, body, .view {
     transition: all 0.3s ease;
   }
 
-  /* Optional: Stronger hover glow */
   .iframe-glow-wrapper:hover {
     box-shadow: 0 0 25px rgba(255, 97, 216, 0.8), 0 0 50px rgba(255, 97, 216, 0.5);
+  }
+
+  .arrow.rotate {
+    transform: rotate(180deg);
   }
